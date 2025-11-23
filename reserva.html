@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Reservar sesión · La Zeta Music Studio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Reserva tu sesión en La Zeta Music Studio · Estudio de grabación profesional en Sevilla (41006).">
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="main.js"></script>
+</head>
+<body>
+  <header class="sub-header">
+    <div class="nav">
+      <div class="logo">La Zeta Music</div>
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a class="active" href="reserva.html">Reservar</a>
+      </nav>
+    </div>
+
+    <div class="sub-hero reveal">
+      <h1>Reserva tu sesión en La Zeta Music Studio</h1>
+      <p>
+        Rellena este formulario y te responderé por WhatsApp o correo para
+        confirmar día, hora y detalles de la sesión.
+      </p>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="section-inner section-grid">
+        <!-- FORMULARIO -->
+        <div class="form-wrapper reveal">
+          <h2>Datos de la reserva</h2>
+          <form id="reserva-form">
+            <label>
+              Nombre artístico / nombre completo
+              <input type="text" name="nombre" required />
+            </label>
+
+            <label>
+              WhatsApp
+              <input type="tel" name="whatsapp" placeholder="+34 6XX XX XX XX" required />
+            </label>
+
+            <label>
+              Email
+              <input type="email" name="email" placeholder="tucorreo@gmail.com" />
+            </label>
+
+            <label>
+              Tipo de sesión
+              <select name="tipo" required>
+                <option value="">Selecciona una opción</option>
+                <option value="grabacion">Grabación de voces</option>
+                <option value="mezcla">Mezcla de tema</option>
+                <option value="grabacion_mezcla">Grabación + mezcla</option>
+                <option value="produccion">Producción desde cero</option>
+              </select>
+            </label>
+
+            <label>
+              Día orientativo
+              <input type="date" name="fecha" />
+            </label>
+
+            <label>
+              Detalles (cuéntame un poco el proyecto)
+              <textarea name="mensaje" rows="4" placeholder="Ej: 1 tema de trap, ya tengo el beat..."></textarea>
+            </label>
+
+            <button type="submit" class="btn-primary full-width">
+              Enviar solicitud
+            </button>
+
+            <p class="form-note">
+              Al darle a enviar, se abrirá tu app de correo con el mensaje ya preparado
+              para enviarlo a <strong>La Zeta Music Studio</strong>. Solo tendrás que pulsar
+              “Enviar”.
+            </p>
+          </form>
+        </div>
+
+        <!-- MAPA -->
+        <div class="map-wrapper reveal">
+          <h2>Cómo llegar</h2>
+          <p class="map-text">
+            Estamos en: <strong>Sevilla · Código postal 41006</strong><br />
+            (La dirección exacta se enviará al confirmar la cita).
+          </p>
+
+          <div class="map-frame">
+            <!-- Mapa centrado en la zona 41006 Sevilla.
+                 Más adelante puedes cambiar el src por el de tu dirección exacta. -->
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12744.115072774953!2d-5.945!3d37.379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd126dcd6a26b7a7%3A0x403d65a45dc32a0!2s41006%20Sevilla!5e0!3m2!1ses!2ses!4v1732240000000!5m2!1ses!2ses"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+
+          <p class="map-text">
+            Cuando tengas la dirección exacta: entra en Google Maps →
+            busca tu estudio → <strong>Compartir</strong> → <strong>Insertar un mapa</strong> →
+            copia el valor de <code>src="..."</code> y sustitúyelo aquí.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <div class="footer-inner">
+      <p>© <span id="year"></span> La Zeta Music Studio · Sevilla (41006)</p>
+      <p class="footer-small">Contacto: lazetaestudios@gmail.com</p>
+    </div>
+  </footer>
+</body>
+</html>
